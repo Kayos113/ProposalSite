@@ -1,0 +1,89 @@
+:root {
+  --light-bg: #EEEBDD;
+  --bright-red: #CE1212;
+  --dark-red: #810000;
+  --dark-bg: #1B1717;
+}
+
+body {
+  background-color: var(--light-bg);
+  margin: 1rem;
+  text-align: center;
+}
+
+h1 {
+  background-color: var(--dark-bg);
+  color: var(--bright-red);
+  font-family: 'Satisfy';
+  font-size: 4rem;
+  border-radius: 20px;
+}
+
+p {
+  color: var(--dark-red);
+  font-family: 'Yomogi';
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.header {
+  padding: 3rem;
+  background-color: var(--dark-bg);
+  
+}
+
+.countdown-div {
+  background-color: var(--dark-bg)
+  padding: 3rem;
+}
+.text-div {
+  color: var(--dark-red);
+  font-family: "Yomogi", sans-serif;
+  margin: 2rem 0;
+}
+
+.helppage {
+  display: block;
+}
+.timerpage {
+  display: none;
+}
+
+.helpbutton {
+   background: var(--bright-red);
+   background-image: -webkit-linear-gradient(top, var(--bright-red), var(--dark-red));
+   background-image: -moz-linear-gradient(top, var(--bright-red), var(--dark-red));
+   background-image: -ms-linear-gradient(top, var(--bright-red), var(--dark-red));
+   background-image: -o-linear-gradient(top, var(--bright-red), var(--dark-red));
+   background-image: -webkit-gradient(to bottom, var(--bright-red), var(--dark-red));
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #EEEBDD;
+   font-family: "Satisfy", Brush Script MT;
+   font-size: 40px;
+   font-weight: 100;
+   padding: 30px 40px;
+   -webkit-box-shadow: 1px 1px 20px 0 #000;
+   -moz-box-shadow: 1px 1px 20px 0 #000;
+   box-shadow: 1px 1px 20px 0 #000;
+   text-shadow: 1px 1px 20px #000;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.helpbutton:hover {
+   border: solid #520000 0;
+   background: var(--dark-red);
+   background-image: -webkit-linear-gradient(top, var(--dark-red), var(--bright-red));
+   background-image: -moz-linear-gradient(top, var(--dark-red), var(--bright-red));
+   background-image: -ms-linear-gradient(top, var(--dark-red), var(--bright-red));
+   background-image: -o-linear-gradient(top, var(--dark-red), var(--bright-red));
+   background-image: -webkit-gradient(to bottom, var(--dark-red), var(--bright-red));
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   text-decoration: none;
+}

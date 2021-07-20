@@ -1,38 +1,46 @@
-const deadline = new Date("7/15/2021 11:59:59 PM")
+const deadline = new Date("8/14/2021 11:59:59 PM")
+// const deadline = new Date("7/19/2021 12:00:00 AM")
+const interval = 200;
+const audio = new Audio("./audio/Arby's Things That Are Yam.mp3");
 
 setInterval(function () {
-  const currTime = Date.now(),
+  let currTime = Date.now(),
   diff = deadline.getTime() - currTime;
-
+  if(diff<0) {
+    diff = Math.abs(diff);
+  }
+  if(diff<interval){
+    console.log("EXECUTING");
+    playAudio();
+  }
+  // console.log(diff);
   let seconds = diff / 1000,
   minutes = seconds / 60,
   hours = minutes / 60,
   days = hours / 24;
 
-  seconds = Math.abs(Math.floor((minutes%1)*60));
-  minutes = Math.abs(Math.floor((hours%1)*60))
-  hours = Math.abs(Math.floor((days%1)*24));
-  if(days<0) {
-    days+=1;
-  }
-  days = Math.abs(Math.floor(days));
+  seconds = Math.floor((minutes%1)*60);
+  minutes = Math.floor((hours%1)*60);
+  hours = Math.floor((days%1)*24);
+  days = Math.floor(days);
+
 
   let timeString = days +" days, ";
-  if(hours<10) {
-    timeString += hours + "0 hours, ";
-  } else {
-    timeString += hours + " hours, ";
+  if(hours<10&&hours>0) {
+    timeString += "0";
   }
-  if(minutes<10) {
-    timeString += minutes + "0 minutes, and ";
-  } else {
-    timeString += minutes + " minutes, and ";
+  timeString += hours + " hours, ";
+  if(minutes<10&&minutes>0) {
+    timeString += "0";
   }
-  if(seconds<10) {
-    timeString += seconds + "0 seconds";
-  } else {
-    timeString += seconds + " seconds";
+  timeString += minutes + " minutes, and ";
+  if(seconds<10&&seconds>0) {
+    timeString += "0";
   }
-  console.log(diff);
+  timeString += seconds + " seconds";
   document.getElementById('timer').innerHTML = timeString;
-}, 1000);
+}, interval);
+
+function playAudio() {
+  audio.play();
+};

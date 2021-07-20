@@ -5,7 +5,10 @@ app.use(express.static("public"));
 
 app.route("/")
 .get((req, res) => {
-  res.render('index');
+  res.render('index', {
+    helpText: "help",
+    propText: "prop"
+  });
 });
 
 let port = 3400;

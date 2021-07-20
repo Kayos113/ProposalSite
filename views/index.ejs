@@ -1,6 +1,27 @@
 <%- include('partials/header') %>
 
-<h1 id='timer'></h1>
+<div id="helpDisplay" class="display helppage">
+<div class="text-div">
+  <%= helpText %>
+</div>
+  <div class="buttonDiv">
+    <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Sure, I'm in.</button>
+    <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Nah, Let Me In Anyway</button>
+  </div>
+</div>
+
+<div id="propDisplay" class="display timerpage">
+
+  <div class="countdown-div container-sm">
+    <h1 id='timer'></h1>
+  </div>
+
+  <div class="text-div">
+    <%= propText %>
+  </div>
+</div>
+
 <script src="/js/countdown.js" charset="utf-8"></script>
+<script src="/js/help.js" charset="utf-8"></script>
 
 <%- include('partials/footer') %>
