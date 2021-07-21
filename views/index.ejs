@@ -2,7 +2,7 @@
 
 <div id="helpDisplay" class="display helppage">
 <div class="text-div">
-  <p> <%- include("messages/helpMessage") %> </p>
+  <%- include("messages/helpMessage") %>
 </div>
   <div class="buttonDiv">
     <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Sure, I'm in.</button>
@@ -17,7 +17,12 @@
   </div>
 
   <div class="text-div">
-    <%= propText %>
+    <script type="text/javascript"> let pastTime = false; </script>
+    <% if(!pastTime) { %>
+      <%- include('messages/preTripMessage') %>
+    <% } else { %>
+      <%- include('messages/postTripMessage') %>
+    <% } %>
   </div>
 </div>
 
