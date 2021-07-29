@@ -1,5 +1,5 @@
 // const deadline = new Date("8/14/2021 11:59:59 PM");
-const deadline = new Date("7/29/2021 04:50:00 PM");
+const deadline = new Date("7/29/2021 04:46:00 PM");
 const interval = 200;
 const audio = new Audio("./audio/Arby's Things That Are Yam.mp3");
 
