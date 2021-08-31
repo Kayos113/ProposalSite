@@ -1,5 +1,5 @@
-// const deadline = new Date("8/14/2021 11:59:59 PM");
-const deadline = new Date("7/29/2021 04:46:00 PM");
+const deadline = new Date("9/19/2021 11:59:59 AM");
+// const deadline = new Date("7/29/2021 09:40:00 PM");
 const interval = 200;
 const audio = new Audio("./audio/Arby's Things That Are Yam.mp3");
 
@@ -24,21 +24,28 @@ setInterval(function () {
   hours = Math.floor((days%1)*24);
   days = Math.floor(days);
 
-
+  let headerString = days + ":";
   let timeString = days +" days, ";
   if(hours<10&&hours>0) {
     timeString += "0";
+    headerString += "0";
   }
   timeString += hours + " hours, ";
+  headerString += hours + ":";
   if(minutes<10&&minutes>0) {
     timeString += "0";
+    headerString += "0";
   }
   timeString += minutes + " minutes, and ";
+  headerString += minutes + ":";
   if(seconds<10&&seconds>0) {
     timeString += "0";
+    headerString += "0";
   }
   timeString += seconds + " seconds";
+  headerString += seconds;
   document.getElementById('timer').innerHTML = timeString;
+  document.getElementById('headTimer').innerHTML = headerString;
 }, interval);
 
 function playAudio() {

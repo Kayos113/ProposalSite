@@ -2,7 +2,7 @@
 
 <div id="helpDisplay" class="display helppage">
 <div class="text-div">
-  <%- include("messages/helpMessage") %>
+  <%= helpText %>
 </div>
   <div class="buttonDiv">
     <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Sure, I'm in.</button>
@@ -17,16 +17,11 @@
   </div>
 
   <div class="text-div">
-    <script type="text/javascript"> let pastTime = false; </script>
-    <% if(true) { %>
-      <%- include('messages/preTripMessage') %>
-    <% } else { %>
-      <%- include('messages/postTripMessage') %>
-    <% } %>
+    <%= displayText %>
   </div>
 </div>
 
-<script src="/js/countdown.js" charset="utf-8"></script>
+<script src="/js/countdown.js" type="module" charset="utf-8"></script>
 <script src="/js/help.js" charset="utf-8"></script>
 
 <%- include('partials/footer') %>
