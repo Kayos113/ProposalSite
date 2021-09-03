@@ -23,7 +23,10 @@ app.route("/")
   });
 });
 
-let port = 3400;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 7000;
+}
 app.listen(port, (err) => {
   if(!err) {
     console.log("Server spinning up on port: " + port);
