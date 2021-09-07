@@ -46,6 +46,7 @@ p {
 
 .propDisplay {
   background-color: var(--improv-blue);
+  padding: 0 100%;
 }
 
 .text-div {
