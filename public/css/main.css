@@ -33,10 +33,21 @@ p {
   background-color: var(--improv-blue);
 }
 
+.buttonDiv {
+  text-align: center;
+  background-color: var(--improv-blue);
+}
+
 .countdown-div {
   background-color: var(--improv-blue);
-  padding: 3rem;
+  color: var(--improv-yellow);
+  text-align: center;
 }
+
+.propDisplay {
+  background-color: var(--improv-blue);
+}
+
 .text-div {
   color: var(--dark-red);
   font-family: "Yomogi", sans-serif;
