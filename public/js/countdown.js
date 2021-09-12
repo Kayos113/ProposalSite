@@ -1,4 +1,4 @@
-const deadline = new Date("9/19/2021 11:59:59 AM");
+const deadline = new Date("9/21/2021 12:14:59 PM");
 // const deadline = new Date("7/29/2021 09:40:00 PM");
 const interval = 200;
 const audio = new Audio("./audio/Arby's Things That Are Yam.mp3");
@@ -50,4 +50,5 @@ setInterval(function () {
 
 function playAudio() {
   audio.play();
+  alert("playing");
 };
