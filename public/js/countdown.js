@@ -51,4 +51,4 @@ setInterval(function () {
 function playAudio() {
   audio.play();
   alert("playing");
-};
+}
