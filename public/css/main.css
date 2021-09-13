@@ -99,3 +99,22 @@ p {
    border-radius: 20px;
    text-decoration: none;
 }
+
+.nowbutton {
+  background: var(--light-bg);
+  background-image: -webkit-linear-gradient(top, var(--light-bg), var(--light-bg));
+  background-image: -moz-linear-gradient(top, var(--light-bg), var(--light-bg));
+  background-image: -ms-linear-gradient(top, var(--light-bg), var(--light-bg));
+  background-image: -o-linear-gradient(top, var(--light-bg), var(--light-bg));
+  border: 0;
+  color: var(--light-bg);
+  font-family: "Satisfy", Brush Script MT;
+  font-size: 40px;
+  font-weight: 100;
+  padding: 30px 40px;
+  text-shadow: 1px 1px 20px var(--light-bg);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}

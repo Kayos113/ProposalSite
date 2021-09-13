@@ -26,19 +26,19 @@ setInterval(function () {
 
   let headerString = days + ":";
   let timeString = days +" days, ";
-  if(hours<10&&hours>0) {
+  if(hours<10&&hours>=0) {
     timeString += "0";
     headerString += "0";
   }
   timeString += hours + " hours, ";
   headerString += hours + ":";
-  if(minutes<10&&minutes>0) {
+  if(minutes<10&&minutes>=0) {
     timeString += "0";
     headerString += "0";
   }
   timeString += minutes + " minutes, and ";
   headerString += minutes + ":";
-  if(seconds<10&&seconds>0) {
+  if(seconds<10&&seconds>=0) {
     timeString += "0";
     headerString += "0";
   }
@@ -50,5 +50,4 @@ setInterval(function () {
 
 function playAudio() {
   audio.play();
-  alert("playing");
 }

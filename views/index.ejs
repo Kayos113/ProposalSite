@@ -7,10 +7,10 @@
   <div class="row buttonDiv">
     <div class="col-sm"></div>
     <div class="col-sm">
-      <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Sure, I'm in.</button>
+      <button type="button" name="button" class="helpbutton" onclick="showPropDisplay(true)">Sure, I'm in.</button>
     </div>
     <div class="col-sm">
-      <button type="button" name="button" class="helpbutton" onclick="showPropDisplay()">Let Me In Anyway</button>
+      <button type="button" name="button" class="helpbutton" onclick="showPropDisplay(false)">Let Me In Anyway</button>
     </div>
     <div class="col-sm"></div>
 
@@ -25,7 +25,9 @@
   </div>
 
   <div class="text-div">
-    <%- displayText %>
+    <p id="displayText">
+      <%- displayText %>
+    </p>
   </div>
 </div>
 
@@ -33,7 +35,7 @@
 
 
 <div class="button col-md">
-  <button type="button" name="right-now" class="helpbutton" onclick="playAudio()">Start Now</button>
+  <button type="button" name="right-now" class="nowbutton" onclick="playAudio()">Start Now</button>
 </div>
 
 <script src="/js/countdown.js" charset="utf-8"></script>
